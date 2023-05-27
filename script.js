@@ -36,13 +36,14 @@ function initializeFaceDetection() {
         const maxExpression = Object.keys(expressions).reduce(
           (a, b) => (expressions[a] > expressions[b] ? a : b)
         );
-        return { emotion: maxExpression, percentage: expressions[maxExpression] };
+        const maxPercentage = expressions[maxExpression];
+        return { emotion: maxExpression, percentage: maxPercentage };
       });
 
       // Get the dominant emotion with the maximum percentage
       const dominantEmotion = getDominantEmotion(emotions);
 
-      // Log the dominant emotion on the webpage
+      // Display the dominant emotion on the webpage
       const dominantEmotionElement = document.getElementById("dominant-emotion");
       dominantEmotionElement.textContent = `Dominant Emotion: ${dominantEmotion}`;
 
