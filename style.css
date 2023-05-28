@@ -110,6 +110,7 @@ body {
       width:28rem;
        border-radius: 50%;
        overflow: hidden;
+       border: 2px solid green;
 
   }
   #video{
@@ -122,6 +123,6 @@ body {
    top: 0;
    left: 0;
    object-fit:fill;
-    border: 2px solid green;
+    
   }
  }
