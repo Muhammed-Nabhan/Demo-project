@@ -71,12 +71,12 @@ function getDominantEmotion(emotions) {
 
 /// Fetch a random quote based on the detected emotion
 function fetchQuoteByEmotion(emotion) {
-  const apiUrl = `https://zenquotes.io/api/quotes?emotion=${emotion}&orderBy=random`;
+  const apiUrl = `https://api.quotable.io/random?tags=${emotion}`;
 
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      const quote = data[0].q;
+      const quote = data.content;
       displayQuote(quote);
     })
     .catch(error => {
@@ -89,5 +89,5 @@ function fetchQuoteByEmotion(emotion) {
 // Display the quote on the webpage
 function displayQuote(quote) {
   const quoteElement = document.getElementById("quote");
-  quoteElement.textContent = quote;
+  quoteElement.textContent =` ${quote}`;
 }
