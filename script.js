@@ -45,7 +45,7 @@ function initializeFaceDetection() {
 
       // Display the dominant emotion on the webpage
       const dominantEmotionElement = document.getElementById("dominant-emotion");
-      dominantEmotionElement.textContent = `Dominant Emotion: ${dominantEmotion}`;
+      dominantEmotionElement.textContent = ` ${dominantEmotion}`;
 
     }, 100);
   });

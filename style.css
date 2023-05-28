@@ -34,13 +34,24 @@ body {
     
     
    justify-content: center;
+   border: none;
     
  
   }
+
   .item2{
    display: flex;
    justify-content: center;
    padding-top:3rem;
+   position:relative;
+   height:28rem;
+   width:28rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  p{
+    font-weight: bolder;
+    color: yellowgreen;
   }
   h1{
     font-weight: bolder;
@@ -62,6 +73,12 @@ body {
     position: absolute;
    
     border: 2px solid green;
+    
+  
+   top: 0;
+   left: 0;
+   object-fit: cover;
+    border: 2px solid green;
   }
  #canvas{
 
@@ -78,7 +95,7 @@ body {
    
   .main{
      display: block;
-     height:
+     
   }
   .item2{
       display: flex;
@@ -106,4 +123,4 @@ body {
    object-fit: cover;
     border: 2px solid green;
   }
-}
+ }
