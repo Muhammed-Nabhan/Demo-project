@@ -70,24 +70,17 @@ function getDominantEmotion(emotions) {
 }
 
 /// Fetch a random quote based on the detected emotion
-function fetchQuoteByEmotion(emotion) {
-  const apiUrl = `https://api.quotable.io/random?tags=${emotion}`;
-
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      const quote = data.content;
-      displayQuote(quote);
-    })
-    .catch(error => {
-      console.error("Error fetching quote:", error);
-    });
+function getpredefinedQuote(emotion) {
+  const quotes={
+    happy:"Happiness is a choice.",
+    sad:"Every cloud has a silver lining.",
+    angry:"Don't let anger control you.",
+    surprised:"Life is full of surprises.",
+    disgusted:"Choose to focus on the positive",
+    fearful:"Face your fears and overcome them.",
+    neutral:"Stay calm and find inner peace.",
+  };
+return quotes[emotion] || "Emotion not recognized."
 }
 
 
-
-// Display the quote on the webpage
-function displayQuote(quote) {
-  const quoteElement = document.getElementById("quote");
-  quoteElement.textContent =` ${quote}`;
-}
