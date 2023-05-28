@@ -69,8 +69,7 @@ function getDominantEmotion(emotions) {
   return dominantEmotion;
 }
 
-// Fetch a random quote based on the detected emotion
-// Fetch a random quote based on the detected emotion
+/// Fetch a random quote based on the detected emotion
 function fetchQuoteByEmotion(emotion) {
   const apiUrl = `https://zenquotes.io/api/quotes?emotion=${emotion}&orderBy=random`;
 
@@ -84,6 +83,8 @@ function fetchQuoteByEmotion(emotion) {
       console.error("Error fetching quote:", error);
     });
 }
+
+
 
 // Display the quote on the webpage
 function displayQuote(quote) {

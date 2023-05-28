@@ -109,8 +109,7 @@ body {
       height:28rem;
       width:28rem;
        border-radius: 50%;
-       overflow: hidden;
-       border: 2px solid green;
+       border: 5px solid green;
 
   }
   #video{
