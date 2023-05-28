@@ -47,7 +47,9 @@ function initializeFaceDetection() {
       const dominantEmotionElement = document.getElementById("dominant-emotion");
       dominantEmotionElement.textContent = ` ${dominantEmotion}`;
 
-      fetchQuoteByEmotion(dominantEmotion);
+      const quoteElement=document.getElementById("quote");
+      const quote=getpredefinedQuote(dominantEmotion);
+      quoteElement.textContent=quote;
 
     }, 100);
   });
@@ -78,7 +80,7 @@ function getpredefinedQuote(emotion) {
     surprised:"Life is full of surprises.",
     disgusted:"Choose to focus on the positive",
     fearful:"Face your fears and overcome them.",
-    neutral:"Stay calm and find inner peace.",
+    neutral:"Stay calm and find inner peace."
   };
 return quotes[emotion] || "Emotion not recognized."
 }
