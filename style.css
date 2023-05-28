@@ -7,7 +7,9 @@
 }
 
 body {
-  background:url('https://source.unsplash.com/random');
+  background:url("/backgrnd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
     font-family: Arial, sans-serif;
     margin:0;
   
