@@ -47,6 +47,8 @@ function initializeFaceDetection() {
       const dominantEmotionElement = document.getElementById("dominant-emotion");
       dominantEmotionElement.textContent = ` ${dominantEmotion}`;
 
+      fetchQuoteByEmotion(dominantEmotion);
+
     }, 100);
   });
 }
@@ -65,4 +67,25 @@ function getDominantEmotion(emotions) {
   }
 
   return dominantEmotion;
+}
+
+// Fetch a random quote based on the detected emotion
+function fetchQuoteByEmotion(emotion) {
+  const apiUrl = "https://zenquotes.io/api/random";
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const quote = data[0].q;
+      displayQuote(quote);
+    })
+    .catch(error => {
+      console.error("Error fetching quote:", error);
+    });
+}
+
+// Display the quote on the webpage
+function displayQuote(quote) {
+  const quoteElement = document.getElementById("quote");
+  quoteElement.textContent = quote;
 }

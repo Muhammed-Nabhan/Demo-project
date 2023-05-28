@@ -50,7 +50,8 @@ body {
     overflow: hidden;
   }
   p{
-    font-weight: bolder;
+    font-size: larger;
+    font-weight: 100px;
     color: yellowgreen;
   }
   h1{
@@ -66,7 +67,7 @@ body {
       width:28rem;
      
       border-radius: 50%;
-     /*position: relative;*/
+    /* position: relative;*/
     
     
     transform: scaleX(-1);
@@ -120,7 +121,7 @@ body {
     position: absolute;
    top: 0;
    left: 0;
-   object-fit: cover;
+   object-fit:fill;
     border: 2px solid green;
   }
  }
